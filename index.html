@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>D.M.F Brand's | The D Men's Fashion</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0A1F1A;--ink2:#12332B;--gold:#E3D3A8;--bone:#F4EFE6;--wine:#BF3B34;--steel:#9DB0A8;--btnt:#F4EFE6;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--bone);font:400 17px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:500;line-height:1.05;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;max-width:1100px;margin:0 auto;gap:12px;flex-wrap:wrap}
+nav b{font:700 24px 'Bodoni Moda',serif;letter-spacing:.05em}
+nav div{display:flex;gap:6px}
+nav button{background:none;border:0;border-bottom:2px solid transparent;color:var(--bone);font:500 16px Manrope,sans-serif;padding:8px 12px;cursor:pointer}
+nav button[aria-current=page]{border-color:var(--gold);color:var(--gold)}
+.btn{display:inline-block;background:var(--wine);color:var(--btnt);text-decoration:none;padding:15px 26px;font:700 16px Manrope,sans-serif;border:1px solid var(--wine);cursor:pointer;transition:background .2s,border-color .2s}
+.btn:hover{background:#D24A42;border-color:var(--gold)}.ghost{background:transparent;border-color:var(--steel)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.page{display:none;animation:in .6s ease both}.page.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* HOME */
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start;padding:30px 0 80px}
+.hero h1{font-size:clamp(70px,13vw,170px);letter-spacing:.02em}
+.hero h1 small{display:block;font:italic 500 .24em 'Bodoni Moda',serif;letter-spacing:.3em;color:var(--gold);margin-top:10px}
+.hero p{font-size:20px;max-width:480px;margin:28px 0}
+.rail{height:360px;position:relative;margin-top:-30px}
+.rail::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--gold)}
+.hanger{position:absolute;top:6px;left:50%;width:240px;margin-left:-120px;transform-origin:50% 0;animation:swing 4.5s ease-in-out infinite alternate}
+@keyframes swing{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}
+.band{background:var(--gold);color:var(--ink);padding:16px 0;font-weight:700}
+.band .wrap{display:flex;gap:10px 40px;flex-wrap:wrap;justify-content:space-between}
+.sec{padding:80px 0}
+h2{font-size:clamp(36px,6vw,64px);margin-bottom:12px}
+.lead{color:var(--steel);max-width:560px;margin:0 0 40px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px}
+.three div{border-top:2px solid var(--gold);padding-top:16px}
+.three h3{font-size:26px;margin-bottom:6px}.three p{margin:0;color:var(--steel);font-size:15px}
+/* COLLECTION */
+.stage{height:440px;perspective:1100px;position:relative;margin:10px 0 20px;touch-action:pan-y;cursor:grab}
+.ring{position:absolute;left:50%;top:20px;width:230px;height:360px;margin-left:-115px;transform-style:preserve-3d}
+.card{position:absolute;inset:0;background:var(--ink2);border:1px solid var(--steel);padding:18px;display:flex;flex-direction:column;backface-visibility:hidden;user-select:none}
+.card svg{width:100%;height:210px;color:var(--c)}
+.card h3{font-size:26px;margin-top:auto}.card p{margin:4px 0 0;font-size:14px;color:var(--steel)}
+.ctl{display:flex;gap:12px;justify-content:center;align-items:center;color:var(--steel);font-size:14px}
+.ctl button{background:none;border:1px solid var(--steel);color:var(--bone);width:44px;height:44px;font-size:20px;cursor:pointer}
+.ctl button:hover{border-color:var(--gold);color:var(--gold)}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--steel);margin-top:70px}
+.cats div{background:var(--ink);padding:30px 24px;transition:background .25s}.cats div:hover{background:var(--ink2)}
+.cats h3{font-size:26px}.cats p{margin:6px 0 0;color:var(--steel);font-size:15px}
+/* FILTERS */
+.fbar{margin-top:70px;border-top:2px solid var(--gold);padding-top:24px}
+.fgrp{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.fgrp>span{width:90px;color:var(--steel);font-size:14px}
+.chip{background:none;border:1px solid var(--steel);color:var(--bone);padding:8px 16px;font:500 14px Manrope,sans-serif;cursor:pointer;display:inline-flex;gap:8px;align-items:center;transition:border-color .2s,background .2s}
+.chip i{width:12px;height:12px;border-radius:50%;background:var(--c);border:1px solid var(--bone)}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed=true]{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.fmeta{display:flex;justify-content:space-between;align-items:center;margin:22px 0 18px;color:var(--steel);font-size:14px}
+.fmeta button{background:none;border:0;color:var(--gold);font:500 14px Manrope,sans-serif;cursor:pointer;text-decoration:underline}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
+.pc{background:var(--ink2);border:1px solid color-mix(in srgb,var(--steel) 45%,transparent);display:flex;flex-direction:column;animation:in .4s ease both}
+.pc .sw{height:120px;background:var(--c)}
+.pc div{padding:16px}.pc h3{font-size:22px}.pc p{margin:4px 0 12px;font-size:14px;color:var(--steel)}
+.pc a{color:var(--gold);font-size:14px;font-weight:700}
+.empty{grid-column:1/-1;text-align:center;padding:50px 0;color:var(--steel)}
+/* VIBE */
+.vibe{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.vbtn{background:var(--gold);color:var(--ink);border:0;padding:14px 22px;font:700 15px Manrope,sans-serif;cursor:pointer;border-radius:40px;box-shadow:0 6px 24px rgba(0,0,0,.3)}
+.vpanel{display:none;background:var(--ink2);border:1px solid var(--gold);padding:16px;width:min(300px,calc(100vw - 32px));box-shadow:0 10px 36px rgba(0,0,0,.35)}
+.vpanel.open{display:block}
+.vpanel h3{font-size:22px;margin-bottom:4px}.vpanel p{margin:0 0 12px;font-size:13px;color:var(--steel)}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vgrid button{display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--bone);border:1px solid var(--steel);padding:8px;font:500 13px Manrope,sans-serif;cursor:pointer;text-align:left}
+.vgrid button[aria-pressed=true]{border-color:var(--gold);outline:2px solid var(--gold)}
+.vgrid span{display:flex;flex:none}.vgrid span i{width:16px;height:28px}
+.vgrid .rnd{grid-column:1/-1;justify-content:center;background:var(--wine);color:var(--btnt);border-color:var(--wine);font-weight:700}
+.wipe{position:fixed;inset:0;z-index:90;pointer-events:none}
+/* CONTACT */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:36px;counter-reset:s;margin-bottom:80px}
+.steps div{counter-increment:s;border-left:1px solid var(--gold);padding-left:22px}
+.steps div::before{content:counter(s);font:italic 500 44px 'Bodoni Moda',serif;color:var(--gold)}
+.steps h3{font-size:24px;margin:4px 0 6px}.steps p{margin:0;color:var(--steel);font-size:15px}
+.tag{background:var(--bone);color:var(--ink);padding:48px 24px;text-align:center;position:relative;margin-top:20px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+.tag::before{content:"";position:absolute;top:16px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--ink)}
+.tag h2{margin-top:24px}.tag p{opacity:.8;margin:0 auto 18px;max-width:440px}
+.num{font:500 clamp(32px,7vw,60px) 'Bodoni Moda',serif;color:var(--wine);text-decoration:none;display:block;margin-bottom:24px}
+footer{padding:26px;color:var(--steel);font-size:14px;text-align:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.rail{height:300px;margin-top:0}}
+@media(prefers-reduced-motion:reduce){.hanger,.page{animation:none}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><symbol id="shirt" viewBox="0 0 200 210"><path fill="currentColor" stroke="#000" stroke-opacity=".3" stroke-width="3" d="M70 10l-52 30 18 48 24-10v120h80V78l24 10 18-48-52-30c-6 14-18 22-30 22S76 24 70 10z"/><path d="M100 32v170M92 60h16M92 100h16M92 140h16" stroke="#0A1F1A" stroke-opacity=".35" stroke-width="3" fill="none"/></symbol></svg>
+
+<nav aria-label="Pages"><b>D.M.F</b><div>
+<button data-p="home">Home</button><button data-p="collection">Collection</button><button data-p="contact">Wholesale</button></div></nav>
+
+<main>
+<!-- PAGE 1 -->
+<section class="page" id="home"><div class="wrap">
+<div class="hero"><div>
+<h1>D.M.F<small>BRAND'S</small></h1>
+<p>Premium men's clothing and accessories. Buy even a single piece at the wholesale rate.</p>
+<div class="cta"><a class="btn" href="https://wa.me/919168922097?text=Hi%20D.M.F%2C%20I%20want%20to%20see%20your%20collection">Get the catalogue</a><button class="btn ghost" data-go="collection">Spin the rack</button></div></div>
+<div class="rail" aria-hidden="true"><svg class="hanger" viewBox="0 0 240 340"><path d="M120 6v22a14 14 0 1 1 -14 14" fill="none" style="stroke:var(--gold)" stroke-width="5" stroke-linecap="round"/><path d="M106 44L16 108q-8 6 0 10h208q8-4 0-10L134 44" fill="none" style="stroke:var(--gold)" stroke-width="5" stroke-linejoin="round"/><g transform="translate(20 118) scale(1)"><path style="fill:var(--ink2);stroke:var(--steel)" d="M60 0l-40 20 12 36 16-8v150h104V48l16 8 12-36-40-20c-8 12-18 18-30 18S68 12 60 0z"/></g><text x="120" y="200" text-anchor="middle" font-family="Bodoni Moda,serif" font-style="italic" font-size="44" style="fill:var(--gold)">D</text><text x="120" y="232" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" style="fill:var(--bone)">SINGLE PIECE</text><text x="120" y="250" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" style="fill:var(--bone)">WHOLESALE RATE</text></svg></div></div></div>
+<div class="band"><div class="wrap"><span>Single piece at wholesale rate</span><span>Clothing and accessories</span><span>Wholesale for shops and resellers</span></div></div>
+<div class="wrap sec"><h2>Why shop with D.M.F</h2><p class="lead">A wholesaler that treats a single buyer like a big one.</p>
+<div class="three"><div><h3>No bulk pressure</h3><p>Order one piece or a full set. The rate stays wholesale.</p></div><div><h3>Full wardrobe</h3><p>Clothing and accessories from one shop.</p></div><div><h3>Direct with the owner</h3><p>Message Bhavesh on WhatsApp for rates and stock.</p></div></div></div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="collection"><div class="wrap sec">
+<h2>The colour rack</h2><p class="lead">Spin it. Each colour is chosen for the feeling it gives a buyer.</p>
+<div class="stage" id="stage"><div class="ring" id="ring"></div></div>
+<div class="ctl"><button id="prev" aria-label="Previous colour">&larr;</button><span>Drag or use the arrows</span><button id="next" aria-label="Next colour">&rarr;</button></div>
+<div class="fbar" id="fbar"><h2 style="font-size:clamp(30px,5vw,44px)">Find your piece</h2>
+<div class="fgrp" data-f="cat" role="group" aria-label="Category"><span>Category</span></div>
+<div class="fgrp" data-f="col" role="group" aria-label="Colour"><span>Colour</span></div>
+<div class="fgrp" data-f="occ" role="group" aria-label="Occasion"><span>Occasion</span></div>
+<div class="fmeta"><span id="count" aria-live="polite"></span><button id="reset">Clear filters</button></div>
+<div class="pgrid" id="pgrid"></div></div>
+<div class="cats"><div><h3>Shirts</h3><p>Formal, casual and party wear</p></div><div><h3>T-shirts</h3><p>Everyday fits</p></div><div><h3>Bottoms</h3><p>Trousers, jeans and cargos</p></div><div><h3>Accessories</h3><p>Belts, wallets, caps and more</p></div></div>
+</div></section>
+
+<!-- PAGE 3 -->
+<section class="page" id="contact"><div class="wrap sec">
+<h2>Wholesale, made simple</h2><p class="lead">No minimum stock to carry. Order what you need.</p>
+<div class="steps"><div><h3>Message us</h3><p>Send a WhatsApp message and ask for the catalogue.</p></div><div><h3>Choose your pieces</h3><p>One piece or a full set. Wholesale rate either way.</p></div><div><h3>Confirm with Bhavesh</h3><p>Finalise the order and collect from the shop.</p></div></div>
+<div class="tag"><h2>Bhavesh Dangi</h2><p>Call or WhatsApp to place an order or ask for today's rates.</p><a class="num" href="tel:+919168922097">91689 22097</a>
+<div class="cta" style="justify-content:center"><a class="btn" href="https://wa.me/919168922097">Chat on WhatsApp</a><a class="btn ghost" style="color:var(--ink);border-color:var(--ink)" href="https://instagram.com/the_d_mens_fashion_official">Instagram</a></div></div>
+</div></section>
+</main>
+<footer>D.M.F Brand's, The D Men's Fashion. Accessories and clothing wholesaler.</footer>
+
+<div class="vibe"><div class="vpanel" id="vpanel" role="group" aria-label="Vibe filters"><h3>Vibe filters</h3><p>Repaint the whole shop in a new mood.</p><div class="vgrid" id="vgrid"></div></div><button class="vbtn" id="vbtn" aria-expanded="false" aria-controls="vpanel">Vibe filters</button></div>
+<script>
+const pages=['home','collection','contact'];
+function show(p){if(!pages.includes(p))p='home';
+ document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id===p));
+ document.querySelectorAll('nav button').forEach(b=>b.toggleAttribute('aria-current',b.dataset.p===p)||(b.dataset.p===p&&b.setAttribute('aria-current','page')));
+ document.querySelectorAll('nav button').forEach(b=>b.dataset.p===p?b.setAttribute('aria-current','page'):b.removeAttribute('aria-current'));
+ scrollTo(0,0);try{history.replaceState(null,'','#'+p)}catch(e){}}
+document.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>show(b.dataset.p));
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>show(b.dataset.go));
+show(location.hash.slice(1));
+// rack
+const items=[['Midnight navy','#2B4A7A','Trust and authority'],['Deep wine','#8A2432','Confidence and desire'],['Olive','#6B7442','Calm and grounded'],['Charcoal','#3C4148','Power and polish'],['Ivory','#F4EFE6','Clarity and ease'],['Champagne','#E3D3A8','Premium and success']];
+const ring=document.getElementById('ring'),n=items.length,step=360/n,R=260;
+items.forEach((it,i)=>{const c=document.createElement('div');c.className='card';c.style.cssText=`--c:${it[1]};transform:rotateY(${i*step}deg) translateZ(${R}px)`;
+ c.innerHTML=`<svg viewBox="0 0 200 210" aria-hidden="true"><use href="#shirt"/></svg><h3>${it[0]}</h3><p>${it[2]}</p>`;ring.appendChild(c)});
+let a=0,drag=false,sx=0,sa=0,hover=false;
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const st=document.getElementById('stage');
+st.onpointerdown=e=>{drag=true;sx=e.clientX;sa=a;st.setPointerCapture(e.pointerId)};
+st.onpointermove=e=>{if(drag)a=sa+(e.clientX-sx)*.4};
+st.onpointerup=()=>drag=false;st.onmouseenter=()=>hover=true;st.onmouseleave=()=>hover=false;
+// filters (sample pieces, replace with real stock)
+const P=[['Classic Shirt','Shirts',0,'Formal'],['Slim Shirt','Shirts',4,'Formal'],['Party Shirt','Shirts',1,'Party'],['Linen Shirt','Shirts',2,'Casual'],
+['Polo Tee','T-shirts',3,'Casual'],['Round Neck Tee','T-shirts',0,'Casual'],['Printed Tee','T-shirts',1,'Party'],
+['Formal Trouser','Bottoms',3,'Formal'],['Chino','Bottoms',2,'Casual'],['Slim Jeans','Bottoms',0,'Casual'],
+['Leather Belt','Accessories',3,'Formal'],['Wallet','Accessories',1,'Formal'],['Cap','Accessories',5,'Casual'],['Party Belt','Accessories',5,'Party']];
+const F={cat:'All',col:'All',occ:'All'};
+const opts={cat:['All','Shirts','T-shirts','Bottoms','Accessories'],col:['All',...items.map(i=>i[0])],occ:['All','Formal','Casual','Party']};
+Object.keys(opts).forEach(k=>{const g=document.querySelector(`[data-f=${k}]`);
+ opts[k].forEach(v=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',v==='All');
+  const ci=items.findIndex(i=>i[0]===v);b.innerHTML=(ci>=0?`<i style="--c:${items[ci][1]}"></i>`:'')+v;
+  b.onclick=()=>{F[k]=v;g.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()};g.appendChild(b)})});
+document.getElementById('reset').onclick=()=>{Object.keys(F).forEach(k=>{F[k]='All';document.querySelectorAll(`[data-f=${k}] .chip`).forEach((x,i)=>x.setAttribute('aria-pressed',i===0))});draw()};
+function draw(){const L=P.filter(p=>(F.cat==='All'||p[1]===F.cat)&&(F.col==='All'||items[p[2]][0]===F.col)&&(F.occ==='All'||p[3]===F.occ));
+ document.getElementById('count').textContent=`Showing ${L.length} of ${P.length} pieces`;
+ document.getElementById('pgrid').innerHTML=L.length?L.map(p=>`<article class="pc"><div class="sw" style="--c:${items[p[2]][1]}"></div><div><h3>${p[0]}</h3><p>${items[p[2]][0]} · ${p[3]}</p><a href="https://wa.me/919168922097?text=${encodeURIComponent('Hi D.M.F, I want the '+items[p[2]][0]+' '+p[0])}">Ask on WhatsApp</a></div></article>`).join(''):`<div class="empty">No pieces match. Clear a filter, or <a style="color:var(--gold)" href="https://wa.me/919168922097">ask us on WhatsApp</a>.</div>`}
+draw();
+let target=null;
+// vibe filters
+const V=[
+['Emerald Night',1,'#0A1F1A','#12332B','#E3D3A8','#F4EFE6','#BF3B34','#9DB0A8','#F4EFE6'],
+['Peach Sorbet',0,'#FFF1E6','#FFDCC4','#C2410C','#2B1B14','#D6336C','#7A4B35','#FFFFFF'],
+['Mint Pop',0,'#E6FFF4','#C2F5DD','#0B7A5A','#0B2B22','#087F5B','#2F6B57','#FFFFFF'],
+['Lavender Dream',0,'#F1EBFF','#DDD0FF','#6D28D9','#1E1038','#7C3AED','#5B4B8A','#FFFFFF'],
+['Electric Lemon',0,'#F7FF8A','#E6F04F','#4C1D95','#17120A','#D6147A','#4B4A12','#FFFFFF'],
+['Bubblegum',0,'#FFD6EC','#FFB8DD','#A3005C','#3A0A27','#C2185B','#7A2F57','#FFFFFF'],
+['Neon Night',1,'#12002B','#240050','#39FF9C','#FFFFFF','#FF2BD6','#B9A6E8','#12002B']];
+const K=['--ink','--ink2','--gold','--bone','--wine','--steel','--btnt'];
+const root=document.documentElement,vgrid=document.getElementById('vgrid'),vpanel=document.getElementById('vpanel'),vbtn=document.getElementById('vbtn');
+function put(t){K.forEach((k,i)=>root.style.setProperty(k,t[i+2]));root.style.colorScheme=t[1]?'dark':'light'}
+function pick(t,name,x,y){vgrid.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.n===name));
+ if(rm){put(t);return}
+ const w=document.createElement('div');w.className='wipe';w.style.background=t[2];document.body.appendChild(w);
+ w.animate([{clipPath:`circle(0px at ${x}px ${y}px)`},{clipPath:`circle(150vmax at ${x}px ${y}px)`}],{duration:650,easing:'cubic-bezier(.6,0,.3,1)'}).onfinish=()=>{put(t);w.animate([{opacity:1},{opacity:0}],{duration:250}).onfinish=()=>w.remove()}}
+V.forEach((t,i)=>{const b=document.createElement('button');b.dataset.n=t[0];b.setAttribute('aria-pressed',i===0);
+ b.innerHTML=`<span aria-hidden="true"><i style="background:${t[2]}"></i><i style="background:${t[4]}"></i><i style="background:${t[6]}"></i></span>${t[0]}`;
+ b.onclick=e=>pick(t,t[0],e.clientX,e.clientY);vgrid.appendChild(b)});
+const r=document.createElement('button');r.className='rnd';r.textContent='Surprise me';
+r.onclick=e=>{const h=Math.floor(Math.random()*360),h2=(h+140+Math.random()*80)%360;
+ pick(['Random',0,`hsl(${h} 100% 92%)`,`hsl(${h} 95% 84%)`,`hsl(${h} 85% 26%)`,`hsl(${h} 70% 9%)`,`hsl(${h2} 80% 36%)`,`hsl(${h} 45% 28%)`,'#FFFFFF'],'Random',e.clientX,e.clientY)};
+vgrid.appendChild(r);
+vbtn.onclick=()=>{const o=vpanel.classList.toggle('open');vbtn.setAttribute('aria-expanded',o);vbtn.textContent=o?'Close':'Vibe filters'};
+
+document.getElementById('next').onclick=()=>{a=Math.round(a/step)*step-step};
+document.getElementById('prev').onclick=()=>{a=Math.round(a/step)*step+step};
+(function loop(){if(!rm&&!drag&&!hover&&document.getElementById('collection').classList.contains('on'))a-=.18;
+ ring.style.transform=`translateZ(-${R}px) rotateY(${a}deg)`;requestAnimationFrame(loop)})();
+</script></body></html>
